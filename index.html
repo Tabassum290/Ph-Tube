@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHTUBE</title>
-    <link rel="shortcut icon" href="./assets/Logo.png" type="image">
+    <link rel="shortcut icon" href="./assets/Icon.png" type="image">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,10 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  .active{
+    background-color: red;
+    color: white;
+  }
 }
 </style>
 </head>
@@ -29,7 +33,7 @@
                 <img class="px-2" src="./assets/Logo.png" alt="">
             </div>
             <div class="navbar-center">
-                <label class="input input-bordered flex items-center gap-2">
+                <label id="search-input" class="input input-bordered flex items-center gap-2">
                     <input type="text" class="grow" placeholder="Sort by name" />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +58,21 @@
 
 </section>
 </main>
+<!-- Open the modal using ID.showModal() method -->
+<button id="showModalData" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+<dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+<div class="modal-box">
+    <div id="modal-content"></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+</div>
+</dialog>
+
+
     <script src="./app.js"></script>
 </body>
 </html>
-
