@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHTUBE</title>
-    <link rel="shortcut icon" href="Icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/Logo.png" type="image">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,10 +19,13 @@
 }
 </style>
 </head>
-<body>
+<body class="inter w-11/12 mx-auto">
     <header>
-        <nav class="navbar w-11/12 mx-auto py-4 botder-4">
-            <div class="logo navbar-start">
+        <div class="lg:hidden block">
+            <img class="p-4 mx-auto" src="./assets/Logo.png" alt="">
+        </div>
+        <nav class="navbar py-4 border-b">
+            <div class="logo navbar-start hidden lg:block">
                 <img class="px-2" src="./assets/Logo.png" alt="">
             </div>
             <div class="navbar-center">
@@ -41,9 +44,17 @@
                   </label>
             </div>
             <div class="navbar-end">
-                <button class="btn px-6 bg-[#FF1F3D]">Blog</button>
+                <button class="btn px-6 bg-[#FF1F3D] text-white">Blog</button>
             </div>
         </nav>
     </header>
+    <nav id="categories" class="py-4 flex gap-4 justify-center"></nav>
+<main>
+<section id="videos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10">
+
+</section>
+</main>
+    <script src="./app.js"></script>
 </body>
 </html>
+
